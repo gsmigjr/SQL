@@ -1,4 +1,11 @@
+--Create Store database 
+
+
 CREATE table clothes_store(id integer primary key,name text,popular integer,price integer,quantity integer);
+
+
+
+
 insert into clothes_store values(1,"short sleeves shirt",5,25,30);
 insert into clothes_store values(2,"long sleeves shirt",1,35,15);
 insert into clothes_store values(3,"sweater",2,40,10);
@@ -14,7 +21,18 @@ insert into clothes_store values(12,"shorts",4,30,50);
 insert into clothes_store values(13,"gloves",2,20,40);
 insert into clothes_store values(14,"scarf",2,10,35);
 insert into clothes_store values(15,"dresses",4,70,50);
+
+
+
+--display database by price
 SELECT * from clothes_store order by price;
+
+---What is the max quantity for the items?
 SELECT name,MAX(quantity) from clothes_store;
+
+--What is the average price for the items?
 SELECT AVG(PRICE)from clothes_store;
+
+
+--What is the maxium item by popular?
 SELECT name,max(popular) from clothes_store;
