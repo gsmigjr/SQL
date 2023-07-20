@@ -77,4 +77,17 @@ select max (date(date_added)) from "netflix_titles_info"
 select type,title from "netflix_titles_info"
 order by title asc;
 
+--Who was the Director for the movie The Starling?
+
+select netflix_people.director,netflix_titles_info.title 
+from "netflix_people"
+left join "netflix_titles_info"
+on netflix_people.show_id = netflix_titles_info.show_id
+where netflix_titles_info.title='The Starling'
+
+
+
+
+
+
 
