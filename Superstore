@@ -1,0 +1,30 @@
+
+
+--order item by price
+select item_name,price
+from superstore
+order by price;
+
+--statistic about item prices
+select sum(price)
+from superstore;
+
+select max(price)
+from superstore;
+
+select min(price)
+from superstore;
+
+--statistic about the price for items in the category of "Kitchen Supplies
+select sum(price)
+from superstore
+where category='Kitchen Supplies';
+
+select avg(price)
+from superstore
+where category='Kitchen Supplies';
+
+--How many "Cozy Throw Blanket" are in stock
+select item_name,stock_quantity
+from superstore
+where item_name='Cozy Throw Blanket';
